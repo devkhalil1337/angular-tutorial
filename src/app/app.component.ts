@@ -8,6 +8,14 @@ import { FavoriteChangedEventArgs } from './favorite/favorite.component';
   encapsulation:ViewEncapsulation.None
 })
 export class AppComponent {
+
+  tweet = {
+    status: "this is an amazing tweet",
+    isLiked:false,
+    likesCount:0
+  }
+
+
   title = 'hello-world';
   post = {
     isFavorite:false

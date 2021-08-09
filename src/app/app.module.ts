@@ -9,6 +9,7 @@ import { CoursesServices } from './courses.services';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { SummaryPipe } from './summary.pipe';
 import { BootstrapPanelComponent } from './bootstrap-panel/bootstrap-panel.component';
+import { LikeComponent } from './like/like.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { BootstrapPanelComponent } from './bootstrap-panel/bootstrap-panel.compo
     CoursesComponent,
     FavoriteComponent,
     SummaryPipe,
-    BootstrapPanelComponent
+    BootstrapPanelComponent,
+    LikeComponent
   ],
   imports: [
     BrowserModule,
