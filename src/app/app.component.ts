@@ -10,4 +10,8 @@ export class AppComponent {
   post = {
     isFavorite:false
   }
+
+  isFavComponentCalled(){
+    console.log("fav component called")
+  }
 }
