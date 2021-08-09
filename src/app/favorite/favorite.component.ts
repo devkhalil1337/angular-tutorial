@@ -16,7 +16,11 @@ export class FavoriteComponent implements OnInit {
 
   onChangeFav(){
     this.isFavorite = !this.isFavorite;
-    this.change.emit();
+    this.change.emit({newValue:this.isFavorite});
   }
 
+}
+
+export interface FavoriteChangedEventArgs{
+  isFav:boolean
 }
