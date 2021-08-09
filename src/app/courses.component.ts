@@ -7,9 +7,13 @@ import { CoursesServices } from "./courses.services";
 })
 
 export class CoursesComponent{
-    courses;
 
-   constructor(service: CoursesServices){
-       this.courses = service.getNames();
-   }
+    paragraph = "";
+
+
+    //     courses;
+
+//    constructor(service: CoursesServices){
+//        this.courses = service.getNames();
+//    }
 }
