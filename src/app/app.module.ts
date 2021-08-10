@@ -10,6 +10,7 @@ import { FavoriteComponent } from './favorite/favorite.component';
 import { SummaryPipe } from './summary.pipe';
 import { BootstrapPanelComponent } from './bootstrap-panel/bootstrap-panel.component';
 import { LikeComponent } from './like/like.component';
+import { CustomDirectiveDirective } from './custom-directive.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { LikeComponent } from './like/like.component';
     FavoriteComponent,
     SummaryPipe,
     BootstrapPanelComponent,
-    LikeComponent
+    LikeComponent,
+    CustomDirectiveDirective
   ],
   imports: [
     BrowserModule,
