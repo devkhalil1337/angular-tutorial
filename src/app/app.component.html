@@ -1,4 +1,11 @@
 
+<ul>
+    <li *ngFor="let course of courses;index as i;even as isEven">
+        {{i+1 + ' ' + isEven}} {{course}}
+    </li>
+</ul>
+
+<!-- 
 <ul class="nav nav-pills">
     <li [class.active] = "viewMode == 'map'"><a (click)="viewMode = 'map'">Map</a></li>
     <li [class.active] = "viewMode == 'list'"><a (click)="viewMode = 'list'">List</a></li>
@@ -9,7 +16,7 @@
     <div *ngSwitchCase="'list'">List</div>
     <div *ngSwitchDefault>Otherwise</div>
 </div>
-
+ -->
 
 
 

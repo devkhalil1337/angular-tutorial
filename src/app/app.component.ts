@@ -14,7 +14,7 @@ export class AppComponent {
 
 
 
-  courses = [];
+  courses = ["English","Computer","Science"];
 
 
   tweet = {
