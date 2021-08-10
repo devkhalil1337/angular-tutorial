@@ -1,0 +1,16 @@
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title" (click)="onToggle()">{{title}} </h4>
+      </div>
+      
+      <ng-content *ngIf="isExpanded"></ng-content>
+
+      <!-- <div [ngSwitch]="title">
+        <div class="panel-body" *ngSwitchCase="'Shipping Details'">
+          Shipping Details Con
+        </div>
+        <div class="panel-body" *ngSwitchCase="'Billing Details'">
+            Billing Details Con
+          </div>
+      </div> -->
+    </div>

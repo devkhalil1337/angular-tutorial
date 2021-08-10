@@ -10,7 +10,6 @@ import { FavoriteChangedEventArgs } from './favorite/favorite.component';
 export class AppComponent {
 
 
-
   coursesObj = [{
     id:1,
     course:"English"

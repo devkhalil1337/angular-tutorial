@@ -11,6 +11,7 @@ import { SummaryPipe } from './summary.pipe';
 import { BootstrapPanelComponent } from './bootstrap-panel/bootstrap-panel.component';
 import { LikeComponent } from './like/like.component';
 import { CustomDirectiveDirective } from './custom-directive.directive';
+import { ZippyComponent } from './zippy/zippy.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CustomDirectiveDirective } from './custom-directive.directive';
     SummaryPipe,
     BootstrapPanelComponent,
     LikeComponent,
-    CustomDirectiveDirective
+    CustomDirectiveDirective,
+    ZippyComponent
   ],
   imports: [
     BrowserModule,
