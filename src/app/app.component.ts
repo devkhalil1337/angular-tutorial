@@ -10,11 +10,39 @@ import { FavoriteChangedEventArgs } from './favorite/favorite.component';
 export class AppComponent {
 
 
+
+  coursesObj = [{
+    id:1,
+    course:"English"
+  },{
+    id:2,
+    course:"Computer"
+  },{
+    id:3,
+    course:"Science"
+  }]
+  courses = ["English","Computer","Science"];
+
+
+
+  onAdd(){
+    this.coursesObj.push({id:4,course:"Maths"})
+  }
+
+  onRemove(course){
+    let index = this.coursesObj.indexOf(course);
+    this.coursesObj.splice(index,1);
+  }
+
+
+
+
+
+
   viewMode = "map";
 
 
 
-  courses = ["English","Computer","Science"];
 
 
   tweet = {

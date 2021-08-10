@@ -1,7 +1,8 @@
-
+<button class="btn btn-primary" (click)="onAdd();">Add</button>
 <ul>
-    <li *ngFor="let course of courses;index as i;even as isEven">
-        {{i+1 + ' ' + isEven}} {{course}}
+    <li *ngFor="let course of coursesObj;index as i;even as isEven">
+        {{i+1}} {{course.course}}
+        <span class="btn btn-prmary" (click)="onRemove(course);">Remove</span>
     </li>
 </ul>
 
