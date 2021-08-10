@@ -12,6 +12,7 @@ import { BootstrapPanelComponent } from './bootstrap-panel/bootstrap-panel.compo
 import { LikeComponent } from './like/like.component';
 import { CustomDirectiveDirective } from './custom-directive.directive';
 import { ZippyComponent } from './zippy/zippy.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ZippyComponent } from './zippy/zippy.component';
     BootstrapPanelComponent,
     LikeComponent,
     CustomDirectiveDirective,
-    ZippyComponent
+    ZippyComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
