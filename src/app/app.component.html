@@ -1,1 +1,24 @@
-<Like [isLiked] = "tweet.isLiked" [count] = "tweet.likesCount"></Like>
+
+<div *ngIf="courses.length > 0; then course else nocourse"></div>
+
+<!-- using templates -->
+<ng-template #course>
+    List of Courses
+</ng-template>
+<ng-template #nocourse>
+    No courses yet
+</ng-template>
+
+
+using if conditions only
+<!-- <div *ngIf="courses.length > 0">
+    List of Courses
+</div>
+
+<div  *ngIf="courses.length == 0">
+    No courses yet
+</div> -->
+
+
+
+<!-- <Like [isLiked] = "tweet.isLiked" [count] = "tweet.likesCount"></Like> -->
