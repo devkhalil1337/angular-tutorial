@@ -1,7 +1,8 @@
 <form action="">
     <div class="form-group">
         <label for="firstName">First Name</label>
-        <input type="text" id="firstName" class="form-control">
+        <input required ngModel name="firstName" type="text" id="firstName" #firstName = "ngModel" (change)="log(firstName);" class="form-control">
+        <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">First Name is not valid</div>
     </div>
     <div class="form-group">
         <label for="comment">Comment</label>
