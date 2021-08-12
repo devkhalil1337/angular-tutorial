@@ -13,6 +13,13 @@ import { LikeComponent } from './like/like.component';
 import { CustomDirectiveDirective } from './custom-directive.directive';
 import { ZippyComponent } from './zippy/zippy.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { GithubProfileComponent } from './github-profile/github-profile.component';
+import { HomeComponent } from './home/home.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { RouterModule } from '@angular/router';
+import { GithubFollowersComponent } from './github-followers/github-followers.component';
+import { PostsComponent } from './posts/posts.component';
 
 @NgModule({
   declarations: [
@@ -24,12 +31,38 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     LikeComponent,
     CustomDirectiveDirective,
     ZippyComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    NotFoundComponent,
+    GithubProfileComponent,
+    HomeComponent,
+    NavbarComponent,
+    GithubFollowersComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot([
+      {
+        path: '',
+        component: HomeComponent
+      }, {
+        path: 'followers',
+        component: GithubFollowersComponent
+      }, {
+        path: 'followers/:username',
+        component: GithubProfileComponent
+      }
+      ,{
+        path: 'posts',
+        component: PostsComponent
+      }
+      ,{
+        path: '**',
+        component: NotFoundComponent
+      }
+    ])
   ],
   providers: [
     CoursesServices
