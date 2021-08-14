@@ -20,6 +20,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { GithubFollowersComponent } from './github-followers/github-followers.component';
 import { PostsComponent } from './posts/posts.component';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { PostsComponent } from './posts/posts.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpModule,
     RouterModule.forRoot([
       {
         path: '',
@@ -51,7 +53,7 @@ import { PostsComponent } from './posts/posts.component';
         path: 'followers',
         component: GithubFollowersComponent
       }, {
-        path: 'followers/:username',
+        path: 'followers/:id',
         component: GithubProfileComponent
       }
       ,{

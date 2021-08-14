@@ -1,1 +1,5 @@
-<p>github-followers works!</p>
+<ul>
+    <li *ngFor="let post of posts">
+        <div><a routerLink="./{{post.id}}"> {{post.title}} </a></div>
+    </li>
+</ul>
