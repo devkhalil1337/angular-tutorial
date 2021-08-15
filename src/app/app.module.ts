@@ -21,6 +21,7 @@ import { RouterModule } from '@angular/router';
 import { GithubFollowersComponent } from './github-followers/github-followers.component';
 import { PostsComponent } from './posts/posts.component';
 import { HttpModule } from '@angular/http';
+import { PostService } from './posts/post.service';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import { HttpModule } from '@angular/http';
     ])
   ],
   providers: [
-    CoursesServices
+    CoursesServices,
+    PostService
   ],
   bootstrap: [AppComponent]
 })
