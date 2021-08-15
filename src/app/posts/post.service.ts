@@ -16,4 +16,9 @@ export class PostService {
   createPost(post){
     return this.http.post(this.url,post);
   }
+
+  onDeletePost(id){
+    return this.http.delete(this.url + '/'+ id);
+  }
+
 }

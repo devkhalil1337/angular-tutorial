@@ -28,8 +28,14 @@ export class GithubFollowersComponent implements OnInit {
     console.log(post.value)
     let postData = {title:post.value}
     this.service.createPost(postData).subscribe(response => {
-      console.log(response);
-      // this.getPosts();
+      let id = response.json()['id'];
+      this.posts.splice(0,0,postData);
+    })
+  }
+
+  onDelete(post,index){
+    this.service.onDeletePost(post).subscribe(response => {
+      this.posts.splice(index,1);
     })
   }
   
