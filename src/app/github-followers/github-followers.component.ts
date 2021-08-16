@@ -25,11 +25,12 @@ export class GithubFollowersComponent implements OnInit {
   }
 
   createPost(post: HTMLInputElement){
-    console.log(post.value)
     let postData = {title:post.value}
     this.service.createPost(postData).subscribe(response => {
       let id = response.json()['id'];
       this.posts.splice(0,0,postData);
+    }, (error : Response) => {
+      console.log(error);
     })
   }
 
