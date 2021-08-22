@@ -49,7 +49,7 @@ import { PostService } from './posts/post.service';
     RouterModule.forRoot([
       {
         path: '',
-        component: HomeComponent
+        component: ContactFormComponent
       }, {
         path: 'followers',
         component: GithubFollowersComponent
@@ -64,6 +64,9 @@ import { PostService } from './posts/post.service';
       ,{
         path: '**',
         component: NotFoundComponent
+      },{
+        path: 'contact',
+        component: ContactFormComponent
       }
     ])
   ],

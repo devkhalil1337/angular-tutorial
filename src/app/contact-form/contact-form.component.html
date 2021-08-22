@@ -1,4 +1,37 @@
-<form action="">
+<form #f = "ngForm" (ngSubmit) = "submit(f)">
+    <div class="form-group">
+        <label for="firstName">Course Name*</label>
+        <input type="text" minlength="5" name="firstName" class="form-control" ngModel #firstName = "ngModel" (change)="log(firstName)" required>
+        <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
+            <div *ngIf="firstName.errors?.minlength">Course Name should be atleast 5 characters</div>
+            <div *ngIf="firstName.errors?.required">Course Name is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="category"> Select Course</label>
+        <select ngModel name="category" id="category" #category = "ngModel" class="form-control" required>
+            <option *ngFor="let method of categories" [value]="method.id">{{method.name}}</option>
+        </select>
+        <div *ngIf="category.touched && category.invalid">
+            <div class="alert alert-danger">Course Name is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="hasGranted">
+            <input type="checkbox" name="hasGranted" ngModel>
+        </label>
+    </div>
+    <div>
+        {{f.value | json}}
+    </div>
+    <button class="btn btn-primary" type="submit" [disabled] = '!f.valid'>Submit</button>
+</form>
+
+
+
+
+
+<!-- <form #f = "ngForm" (ngSubmit) = "submit(f)">
     <div class="form-group">
         <label for="firstName">First Name</label>
         <input required  minlength="3" ngModel name="firstName" type="text" id="firstName" #firstName = "ngModel" (change)="log(firstName);" class="form-control">
@@ -13,4 +46,4 @@
         <textarea  id="comment" cols="30" rows="10" class="form-control"></textarea>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+</form> -->

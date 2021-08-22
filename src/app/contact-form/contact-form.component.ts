@@ -7,6 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactFormComponent {
 
+  categories = [
+    {id: 1, name: 'Development'},
+    {id: 2, name: 'Study'},
+  ];
+
+
+submit(f){
+  console.log(f)
+}
 
   log(event){
     console.log(event)
