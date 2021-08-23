@@ -17,6 +17,12 @@ form = new FormGroup({
   password: new FormControl()
 });
 
+login(){
+  this.form.setErrors({
+    invalidUser:true
+  })
+}
+
 get username(){
   return this.form.get('username');
 }
