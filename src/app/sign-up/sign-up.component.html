@@ -12,6 +12,7 @@
           <div *ngIf="username.errors.required">Username is required</div>
           <div *ngIf="username.errors.minlength">Username must be {{username.errors.minlength.requiredLength}} characters</div>
           <div *ngIf="username.errors.cannotContainSpace">Username cannot have space</div>
+          <div *ngIf="username.errors.shouldBeUnique">Username should be Unique</div>
         </div>
       <!-- <small id="username1" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
     </div>
