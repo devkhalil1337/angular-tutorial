@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -22,6 +22,7 @@ import { GithubFollowersComponent } from './github-followers/github-followers.co
 import { PostsComponent } from './posts/posts.component';
 import { HttpModule } from '@angular/http';
 import { PostService } from './posts/post.service';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -39,17 +40,19 @@ import { PostService } from './posts/post.service';
     HomeComponent,
     NavbarComponent,
     GithubFollowersComponent,
-    PostsComponent
+    PostsComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     RouterModule.forRoot([
       {
         path: '',
-        component: ContactFormComponent
+        component: SignUpComponent
       }, {
         path: 'followers',
         component: GithubFollowersComponent
