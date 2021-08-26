@@ -26,6 +26,13 @@ export class PostsComponent {
     });
   }
 
+  updatePost(topic: HTMLInputElement){
+    console.log(topic.value)
+    let post = {title:topic.value}
+    this.http.put("https://jsonplaceholder.typicode.com/posts/1",JSON.stringify(post)).subscribe(response => {
+
+    });
+  }
   
 
 
