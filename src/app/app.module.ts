@@ -54,7 +54,7 @@ import { NewCourseFormComponent } from './new-course-form/new-course-form.compon
     RouterModule.forRoot([
       {
         path: '',
-        component: NewCourseFormComponent
+        component: PostsComponent
       }, {
         path: 'followers',
         component: GithubFollowersComponent
