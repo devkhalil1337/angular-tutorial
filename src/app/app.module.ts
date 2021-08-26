@@ -23,6 +23,7 @@ import { PostsComponent } from './posts/posts.component';
 import { HttpModule } from '@angular/http';
 import { PostService } from './posts/post.service';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     NavbarComponent,
     GithubFollowersComponent,
     PostsComponent,
-    SignUpComponent
+    SignUpComponent,
+    NewCourseFormComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +54,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     RouterModule.forRoot([
       {
         path: '',
-        component: SignUpComponent
+        component: NewCourseFormComponent
       }, {
         path: 'followers',
         component: GithubFollowersComponent
